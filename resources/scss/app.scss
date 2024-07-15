@@ -1,1 +1,86 @@
 @import "~bootstrap/scss/bootstrap.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0282f9;
+    --bg-footer: #303030;
+    --font-black: #000000;
+    --font-grey: #797979;
+}
+
+// || GENERAL
+body {
+    font-family: sans-serif;
+    background-color: #1c1c1c;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+// || UTILS
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.row-between-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+// || HEADER
+header {
+    background-color: white;
+
+    img {
+        width: 85px
+    }
+
+    nav ul {
+        li {
+            text-transform: uppercase;
+            margin: 0 .75rem;
+            padding: 3rem 0;
+            border-bottom: 5px solid transparent;
+            font-size: .85rem;
+            font-weight: bold;
+
+            &.active {
+                border-bottom-color: var(--primary-color);
+            }
+
+            a {
+                color: var(--bg-footer);
+            }
+        }
+    }
+
+}
