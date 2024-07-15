@@ -3,9 +3,25 @@
 @section('page-title', 'Homepage')
 
 @section('main-content')
+    <section class="jumbotron">
+    </section>
+
     <section class="main-content">
-        <div class="container">
-            <h2>Check the Comics page!</h2>
+        <div class="container column-center">
+            <div class="tag">
+                <h2>Current series</h2>
+            </div>
+            <div class="card-wrapper">
+                @foreach ($data as $comic)
+                    <article>
+                        <div class="card-image">
+                            <img src="{{$comic["thumb"]}}" alt="{{$comic["series"]}}">
+                        </div>
+                        <p> {{$comic["title"]}} </p>
+                    </article>
+                @endforeach
+            </div>
+            <button>Load more</button>
         </div>
     </section>
 

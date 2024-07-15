@@ -14,6 +14,42 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    $shopLinks = [
+        [
+            "id" => 1,
+            "title" => 'Digital Comics',
+            "image" => 'buy-comics-digital-comics.png',
+            "url" => '#'
+        ],
+        [
+            "id" => 2,
+            "title" => 'Merchandise',
+            "image" => 'buy-comics-merchandise.png',
+            "url" => '#'
+        ],
+        [
+            "id" => 3,
+            "title" => 'Subscription',
+            "image" => 'buy-comics-subscriptions.png',
+            "url" => '#'
+        ],
+        [
+            "id" => 4,
+            "title" => 'Comic Shop Locator',
+            "image" => 'buy-comics-shop-locator.png',
+            "url" => '#'
+        ],
+        [
+            "id" => 5,
+            "title" => 'DC Power Visa',
+            "image" => 'buy-dc-power-visa.svg',
+            "url" => '#'
+        ]
+    ];
+    return view('pages.home', compact("shopLinks"));
+});
+
+Route::get('/comics', function () {
     $data = [
         [
             "title" => "Action Comics #1000: The Deluxe Edition",
@@ -156,5 +192,5 @@ Route::get('/', function () {
             "url" => '#'
         ]
     ];
-    return view('pages.home', compact("data", "shopLinks"));
+    return view('pages.comics', compact("data", "shopLinks"));
 });
