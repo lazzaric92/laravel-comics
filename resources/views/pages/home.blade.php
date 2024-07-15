@@ -5,7 +5,7 @@
 @section('main-content')
     <section class="main-content">
         <div class="container">
-            <h2>Check the Comics page!</h2>
+            <h2> --> Check the Comics page!</h2>
         </div>
     </section>
 
