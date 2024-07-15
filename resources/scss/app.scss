@@ -82,5 +82,75 @@ header {
             }
         }
     }
+}
 
+footer {
+    div.container {
+        height: 100%;
+    }
+
+    section.footer-nav{
+        background-image: url(../img/footer-bg.jpg);
+        background-size: cover;
+        height: 375px;
+        overflow-y: clip;
+
+        .nav-wrapper {
+            display: flex;
+            flex-flow: column wrap;
+            height: 100%;
+            padding: 3rem 0;
+
+            nav {
+                margin-right: 2rem;
+                margin-bottom: .5rem;
+
+                h2 {
+                    margin-bottom: .8rem;
+                    text-transform: uppercase;
+                    font-size: 1.2rem;
+                }
+
+                li {
+                    margin-bottom: .3rem;
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        a {
+            color: var(--font-grey);
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color: white;
+        }
+    }
+
+    section.footer {
+        background-color: var(--bg-footer);
+        padding: 2rem 0;
+
+        button {
+            text-transform: uppercase;
+            background-color: transparent;
+            color: white;
+            padding: 1rem;
+            border: 2px solid var(--primary-color);
+            cursor: pointer;
+        }
+
+        .socials {
+            h2 {
+                text-transform: uppercase;
+                color: var(--primary-color);
+                margin-right: 1.5rem
+            }
+
+            ul li {
+                    margin: 0 .75rem;
+            }
+        }
+    }
 }
