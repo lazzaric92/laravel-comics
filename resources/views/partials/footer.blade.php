@@ -120,6 +120,33 @@
                 ]
             ],
         ]
+    ];
+    $socialLinks = [
+        [
+            "title" => 'Facebook',
+            "image" => 'footer-facebook.png',
+            "url" => '#'
+        ],
+        [
+            "title" => 'Twitter',
+            "image" => 'footer-twitter.png',
+            "url" => '#'
+        ],
+        [
+            "title" => 'Youtube',
+            "image" => 'footer-youtube.png',
+            "url" => '#'
+        ],
+        [
+            "title" => 'Pinterest',
+            "image" => 'footer-pinterest.png',
+            "url" => '#'
+        ],
+        [
+            "title" => 'Periscope',
+            "image" => 'footer-periscope.png',
+            "url" => '#'
+        ]
     ]
 @endphp
 
@@ -152,31 +179,13 @@
             <div class="socials row-center">
                 <h2>Follow us</h2>
                 <ul class="row-center">
-                    <li>
-                        <a href="#">
-                            <img src=" {{Vite::asset('resources/img/footer-facebook.png')}} " alt="Facebook Icon`">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src=" {{Vite::asset('resources/img/footer-twitter.png')}} " alt="Twitter Icon`">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src=" {{Vite::asset('resources/img/footer-youtube.png')}} " alt="Youtube Icon`">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src=" {{Vite::asset('resources/img/footer-periscope.png')}} " alt="Periscope Icon`">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <img src=" {{Vite::asset('resources/img/footer-pinterest.png')}} " alt="Pinterest Icon`">
-                        </a>
-                    </li>
+                    @foreach ($socialLinks as $link)
+                        <li>
+                            <a href=" {{ $link["url"] }} ">
+                                <img src=" {{Vite::asset('resources/img/'. $link["image"])}} " alt="{{ $link["title"] }}">
+                            </a>
+                        </li>
+                    @endforeach
                 </ul>
             </div>
         </div>
