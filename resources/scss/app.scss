@@ -22,6 +22,7 @@ body {
 
 ul {
     list-style-type: none;
+    margin-bottom: 0;
 }
 
 a {
@@ -64,24 +65,20 @@ header {
         width: 85px
     }
 
-    nav ul {
-        margin-bottom: 0;
+    ul li {
+        text-transform: uppercase;
+        margin: 0 .75rem;
+        padding: 3rem 0;
+        border-bottom: 5px solid transparent;
+        font-size: .85rem;
+        font-weight: bold;
 
-        li {
-            text-transform: uppercase;
-            margin: 0 .75rem;
-            padding: 3rem 0;
-            border-bottom: 5px solid transparent;
-            font-size: .85rem;
-            font-weight: bold;
+        &.active {
+            border-bottom-color: var(--primary-color);
+        }
 
-            &.active {
-                border-bottom-color: var(--primary-color);
-            }
-
-            a {
-                color: var(--bg-footer);
-            }
+        a {
+            color: var(--bg-footer);
         }
     }
 }
@@ -144,6 +141,35 @@ header {
         }
     }
 }
+
+.shop-banner {
+    background-color: var(--primary-color);
+
+    ul {
+        padding: 3rem;
+
+        li {
+            width: calc(100% / 6);
+        }
+
+        img {
+            margin-right: 1rem;
+            width: 50px;
+            height: 55px;
+        }
+
+        a {
+            text-transform: uppercase;
+            color: white;
+            font-size: .85rem;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
 
 // || FOOTER
 footer {

@@ -12,15 +12,33 @@
                 <h2>Current series</h2>
             </div>
             <div class="card-wrapper">
-                <article>
-                    <div class="card-image">
-                        {{-- <img :src="singleCard.thumb" :alt="singleCard.series"> --}}
-                        <h5>Card Image</h5>
-                    </div>
-                    <p> Comic title </p>
-                </article>
+                @foreach ($data as $comic)
+                    <article>
+                        <div class="card-image">
+                            <img src="{{$comic["thumb"]}}" alt="{{$comic["series"]}}">
+                        </div>
+                        <p> {{$comic["title"]}} </p>
+                    </article>
+                @endforeach
             </div>
             <button>Load more</button>
+        </div>
+    </section>
+
+    <section class="shop-banner">
+        <div class="container">
+            <ul class="row-between-center">
+                @foreach ($shopLinks as $link)
+                    <li class="row-center">
+                        <img src=" {{ Vite::asset("resources/img/".$link["image"]) }} " alt="{{ $link["title"] }}">
+                        <a href="{{$link["url"]}}"> {{$link["title"]}} </a>
+                    </li>
+                @endforeach
+                {{-- <li v-for="link in shopLinks" :key="link.id">
+                    <img :src="getImagePath(link.image)" :alt="link.title">
+                    <a :href="link.url"> {{ link.title }} </a>
+                </li> --}}
+            </ul>
         </div>
     </section>
 @endsection
