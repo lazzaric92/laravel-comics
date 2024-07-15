@@ -3,7 +3,7 @@
         <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC Comics Logo">
         <nav>
             <ul class="row-center">
-                <li>
+                <li class="active">
                     <a href="/">Home</a>
                 </li>
                 <li>

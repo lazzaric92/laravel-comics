@@ -65,6 +65,8 @@ header {
     }
 
     nav ul {
+        margin-bottom: 0;
+
         li {
             text-transform: uppercase;
             margin: 0 .75rem;
@@ -84,6 +86,7 @@ header {
     }
 }
 
+// || FOOTER
 footer {
     div.container {
         height: 100%;
