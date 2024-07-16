@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('page-title', 'Homepage')
-
+{{-- @dump(Route::currentRouteName()) --}}
 @section('main-content')
     <section class="jumbotron">
     </section>

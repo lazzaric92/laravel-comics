@@ -46,8 +46,8 @@ Route::get('/', function () {
             "url" => '#'
         ]
     ];
-    return view('pages.home', compact("shopLinks"));
-});
+    return view('pages.guest.home', compact("shopLinks"));
+})->name('guest.home');
 
 Route::get('/comics', function () {
     $data = [
@@ -192,5 +192,5 @@ Route::get('/comics', function () {
             "url" => '#'
         ]
     ];
-    return view('pages.comics', compact("data", "shopLinks"));
-});
+    return view('pages.guest.comics', compact("data", "shopLinks"));
+})->name('guest.comics');

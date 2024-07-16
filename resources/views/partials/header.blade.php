@@ -1,71 +1,72 @@
 @php
     $headerLinks = [
             [
+                "id" => 1,
                 "title" => 'home',
-                "active" => false,
-                "url" => '/'
+                "url" => "guest.home"
             ],
             [
+                "id" => 2,
                 "title" => 'characters',
-                "active" => false,
                 "url" => '#'
             ],
             [
+                "id" => 3,
                 "title" => 'comics',
-                "active" => true,
-                "url" => '/comics'
+                "url" => "guest.comics"
             ],
             [
+                "id" => 4,
                 "title" => 'movies',
-                "active" => false,
                 "url" => '#'
             ],
             [
+                "id" => 5,
                 "title" => 'tv',
-                "active" => false,
                 "url" => '#'
             ],
             [
+                "id" => 6,
                 "title" => 'games',
-                "active" => false,
                 "url" => '#'
             ],
             [
+                "id" => 7,
                 "title" => 'collectibles',
-                "active" => false,
                 "url" => '#'
             ],
             [
+                "id" => 8,
                 "title" => 'videos',
-                "active" => false,
                 "url" => '#'
             ],
             [
+                "id" => 9,
                 "title" => 'fans',
-                "active" => false,
                 "url" => '#'
             ],
             [
+                "id" => 10,
                 "title" => 'news',
-                "active" => false,
                 "url" => '#'
             ],
             [
+                "id" => 11,
                 "title" => 'shop',
-                "active" => false,
                 "url" => '#'
             ]
         ]
 @endphp
 
+{{-- @dump(Route::currentRouteName()) --}}
 <header>
     <div class="container row-between-center">
         <img src="{{ Vite::asset('resources/img/dc-logo.png') }}" alt="DC Comics Logo">
         <nav>
             <ul class="row-center">
                 @foreach($headerLinks as $link)
-                    <li>
-                        <a href=" {{$link["url"]}} "> {{ $link["title"] }} </a>
+                    <li class=" {{Route::currentRouteName() === $link["url"] ? 'active' : ''}} ">
+                        <a href=" {{ $link["url"] === "#" ? $link["url"] : route($link["url"]) }} "> {{ $link["title"] }} </a>
                     </li>
                 @endforeach
             </ul>
