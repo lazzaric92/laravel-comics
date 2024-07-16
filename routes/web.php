@@ -14,39 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $shopLinks = [
-        [
-            "id" => 1,
-            "title" => 'Digital Comics',
-            "image" => 'buy-comics-digital-comics.png',
-            "url" => '#'
-        ],
-        [
-            "id" => 2,
-            "title" => 'Merchandise',
-            "image" => 'buy-comics-merchandise.png',
-            "url" => '#'
-        ],
-        [
-            "id" => 3,
-            "title" => 'Subscription',
-            "image" => 'buy-comics-subscriptions.png',
-            "url" => '#'
-        ],
-        [
-            "id" => 4,
-            "title" => 'Comic Shop Locator',
-            "image" => 'buy-comics-shop-locator.png',
-            "url" => '#'
-        ],
-        [
-            "id" => 5,
-            "title" => 'DC Power Visa',
-            "image" => 'buy-dc-power-visa.svg',
-            "url" => '#'
-        ]
-    ];
-    return view('pages.guest.home', compact("shopLinks"));
+    return view('pages.guest.home');
 })->name('guest.home');
 
 Route::get('/comics', function () {
@@ -160,37 +128,5 @@ Route::get('/comics', function () {
             "type" => "graphic novel",
         ]
     ];
-    $shopLinks = [
-        [
-            "id" => 1,
-            "title" => 'Digital Comics',
-            "image" => 'buy-comics-digital-comics.png',
-            "url" => '#'
-        ],
-        [
-            "id" => 2,
-            "title" => 'Merchandise',
-            "image" => 'buy-comics-merchandise.png',
-            "url" => '#'
-        ],
-        [
-            "id" => 3,
-            "title" => 'Subscription',
-            "image" => 'buy-comics-subscriptions.png',
-            "url" => '#'
-        ],
-        [
-            "id" => 4,
-            "title" => 'Comic Shop Locator',
-            "image" => 'buy-comics-shop-locator.png',
-            "url" => '#'
-        ],
-        [
-            "id" => 5,
-            "title" => 'DC Power Visa',
-            "image" => 'buy-dc-power-visa.svg',
-            "url" => '#'
-        ]
-    ];
-    return view('pages.guest.comics', compact("data", "shopLinks"));
+    return view('pages.guest.comics', compact("data"));
 })->name('guest.comics');
