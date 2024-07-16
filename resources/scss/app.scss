@@ -1,16 +1,16 @@
 @import "~bootstrap/scss/bootstrap.scss";
+@import "./partials/generic/variables.scss";
+@import "./partials/generic/mixins.scss";
+@import "./partials/pages/header.scss";
+@import "./partials/pages/footer.scss";
+@import "./partials/pages/shop-banner.scss";
+@import "./partials/pages/main-content.scss";
+@import "./partials/pages/main-comics.scss";
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --primary-color: #0282f9;
-    --bg-footer: #303030;
-    --font-black: #000000;
-    --font-grey: #797979;
 }
 
 // || GENERAL
@@ -37,217 +37,9 @@ h2{
     font-size: 1.8rem;
 }
 
-// || UTILS
-.container {
-    max-width: 1180px;
-    margin: 0 auto;
-}
-
-.row-between-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.row-center {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.column-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-// || HEADER
-header {
-    background-color: white;
-
-    img {
-        width: 85px
-    }
-
-    ul li {
-        text-transform: uppercase;
-        margin: 0 .75rem;
-        padding: 3rem 0;
-        border-bottom: 5px solid transparent;
-        font-size: .85rem;
-        font-weight: bold;
-
-        &.active {
-            border-bottom-color: var(--primary-color);
-        }
-
-        a {
-            color: var(--bg-footer);
-        }
-    }
-}
-
-// || MAIN
+// || JUMBOTRON
 .jumbotron {
     height: 375px;
     background-image: url(../img/jumbotron.jpg);
     background-size: cover;
-}
-
-.main-content {
-    padding-bottom: 1.5rem;
-    padding-top: 1.5rem;
-
-    .tag {
-        background-color: var(--primary-color);
-        text-transform: uppercase;
-        padding: .5rem 1.5rem;
-        align-self: flex-start;
-        margin-top: -3.15rem;
-        margin-bottom: 2rem;
-        margin-left: -.5rem;
-    }
-
-    .card-wrapper {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    button {
-        text-transform: uppercase;
-        background-color: var(--primary-color);
-        color: white;
-        font-weight: bold;
-        border: none;
-        padding: .5rem 3rem;
-        cursor: pointer;
-    }
-
-    article{
-        width: calc((100% / 6) - 1rem);
-        margin: 0 .5rem 3.5rem;
-        cursor: pointer;
-
-        .card-image{
-            width: 100%;
-            height: 185px;
-            overflow-y: clip;
-            margin-bottom: 1.2rem;
-
-            img {
-                width: 100%
-            }
-        }
-
-        p{
-            text-transform: uppercase;
-            font-size: .8rem;
-        }
-    }
-}
-
-.shop-banner {
-    background-color: var(--primary-color);
-
-    ul {
-        padding: 3rem;
-
-        li {
-            width: calc(100% / 6);
-        }
-
-        img {
-            margin-right: 1rem;
-            width: 50px;
-            height: 55px;
-        }
-
-        a {
-            text-transform: uppercase;
-            color: white;
-            font-size: .85rem;
-        }
-
-        a:hover{
-            text-decoration: underline;
-        }
-    }
-}
-
-
-// || FOOTER
-footer {
-    div.container {
-        height: 100%;
-    }
-
-    section.footer-nav{
-        background-image: url(../img/footer-bg.jpg);
-        background-size: cover;
-        height: 375px;
-        overflow-y: clip;
-
-        .nav-wrapper {
-            display: flex;
-            flex-flow: column wrap;
-            height: 100%;
-            padding: 2rem 0;
-
-            nav {
-                margin-right: 2rem;
-                margin-bottom: .5rem;
-
-                h2 {
-                    margin-bottom: .8rem;
-                    text-transform: uppercase;
-                    font-size: 1.1rem;
-                    font-weight: bold;
-                }
-
-                li {
-                    margin-bottom: .3rem;
-                    font-size: .8rem;
-                }
-            }
-        }
-
-        a {
-            color: var(--font-grey);
-        }
-
-        a:hover{
-            text-decoration: underline;
-            color: white;
-        }
-    }
-
-    section.footer {
-        background-color: var(--bg-footer);
-        padding: 2rem 0;
-
-        button {
-            text-transform: uppercase;
-            background-color: transparent;
-            color: white;
-            padding: 1rem;
-            border: 2px solid var(--primary-color);
-            cursor: pointer;
-        }
-
-        .socials {
-            h2 {
-                text-transform: uppercase;
-                color: var(--primary-color);
-                margin-right: 1.5rem
-            }
-
-            ul li {
-                    margin: 0 .75rem;
-            }
-        }
-    }
 }

@@ -1,0 +1,33 @@
+.shop-banner {
+    .container{
+        @include my-container();
+    }
+
+    background-color: $primary-color;
+
+    ul {
+        @include row-between-center();
+        padding: 3rem;
+
+        li {
+            @include row-center();
+            width: calc(100% / 6);
+        }
+
+        img {
+            margin-right: 1rem;
+            width: 50px;
+            height: 55px;
+        }
+
+        a {
+            text-transform: uppercase;
+            color: white;
+            font-size: .85rem;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}

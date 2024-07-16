@@ -1,0 +1,33 @@
+header#app-header {
+    background-color: white;
+
+    .container {
+        @include my-container();
+        @include row-between-center();
+    }
+
+    img {
+        width: 85px
+    }
+
+    ul {
+        @include row-center();
+
+        li {
+            text-transform: uppercase;
+            margin: 0 .75rem;
+            padding: 3rem 0;
+            border-bottom: 5px solid transparent;
+            font-size: .85rem;
+            font-weight: bold;
+
+            &.active {
+                border-bottom-color: $primary-color;
+            }
+
+            a {
+                color: $bg-footer;
+            }
+        }
+    }
+}

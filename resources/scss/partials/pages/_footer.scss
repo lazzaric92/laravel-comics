@@ -1,0 +1,78 @@
+footer#app-footer {
+    div.container {
+        @include my-container();
+        @include row-between-center();
+        height: 100%;
+    }
+
+    section.footer-nav{
+        background-image: url(../../../img/footer-bg.jpg);
+        background-size: cover;
+        height: 375px;
+        overflow-y: clip;
+
+        .nav-wrapper {
+            display: flex;
+            flex-flow: column wrap;
+            height: 100%;
+            padding: 2rem 0;
+
+            nav {
+                margin-right: 2rem;
+                margin-bottom: .5rem;
+
+                h2 {
+                    margin-bottom: .8rem;
+                    text-transform: uppercase;
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                }
+
+                li {
+                    margin-bottom: .3rem;
+                    font-size: .8rem;
+                }
+            }
+        }
+
+        a {
+            color: $font-grey;
+        }
+
+        a:hover{
+            text-decoration: underline;
+            color: white;
+        }
+    }
+
+    section.footer {
+        background-color: $bg-footer;
+        padding: 2rem 0;
+
+        button {
+            text-transform: uppercase;
+            background-color: transparent;
+            color: white;
+            padding: 1rem;
+            border: 2px solid $primary-color;
+            cursor: pointer;
+        }
+
+        .socials {
+            @include row-center();
+            h2 {
+                text-transform: uppercase;
+                color: $primary-color;
+                margin-right: 1.5rem
+            }
+
+            ul {
+                @include row-center();
+
+                li {
+                    margin: 0 .75rem;
+                }
+            }
+        }
+    }
+}

@@ -150,9 +150,9 @@
     ]
 @endphp
 
-<footer>
+<footer id="app-footer">
     <section class="footer-nav">
-        <div class="container row-between-center">
+        <div class="container">
             <div class="nav-wrapper">
                 @foreach($navs as $nav)
                     <nav>
@@ -174,11 +174,11 @@
         </div>
     </section>
     <section class="footer">
-        <div class="container row-between-center">
+        <div class="container">
             <button>Sign-up now!</button>
-            <div class="socials row-center">
+            <div class="socials">
                 <h2>Follow us</h2>
-                <ul class="row-center">
+                <ul>
                     @foreach ($socialLinks as $link)
                         <li>
                             <a href=" {{ $link["url"] }} ">

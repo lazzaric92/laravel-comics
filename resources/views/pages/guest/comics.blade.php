@@ -6,8 +6,8 @@
     <section class="jumbotron">
     </section>
 
-    <section class="main-content">
-        <div class="container column-center">
+    <section class="main-content" id="main-comics">
+        <div class="container">
             <div class="tag">
                 <h2>Current series</h2>
             </div>
@@ -25,16 +25,5 @@
         </div>
     </section>
 
-    <section class="shop-banner">
-        <div class="container">
-            <ul class="row-between-center">
-                @foreach ($shopLinks as $link)
-                    <li class="row-center">
-                        <img src=" {{ Vite::asset("resources/img/".$link["image"]) }} " alt="{{ $link["title"] }}">
-                        <a href="{{$link["url"]}}"> {{$link["title"]}} </a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-    </section>
+    @include('partials.shop-banner')
 @endsection
